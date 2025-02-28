@@ -1,13 +1,11 @@
 <h1 align="center">Hi 👋, I am a JavaScript Full Stack Developer From US!!</h1>
-- 🔭 I’m currently working on **my personal website**
-
-- 🌱 I’m currently learning **Python**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
+<p align="center">
+🔭 I’m currently working on **my personal website**
 </p>
-
-<h3 align="left">Languages and Tools:</h3>
+<p align="center">
+🌱 I’m currently learning **Python**
+</p>
+<hr />
 <p align="center"> 
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
