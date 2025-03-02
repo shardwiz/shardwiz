@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I am a JavaScript Full Stack Developer From US!!</h1>
+<h1 align="center">Hi 👋, I am a JavaScript Full Stack Developer!</h1>
 <p align="center">
 🔭 I’m currently working on **my personal website**
 </p>
