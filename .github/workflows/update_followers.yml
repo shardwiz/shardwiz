@@ -14,15 +14,20 @@ jobs:
 
       - name: Fetch followers and update README
         run: |
-          curl -s "https://api.github.com/users/shardwiz/followers" | jq -r '.[] | "![Avatar](\(.avatar_url)&s=40)"' > followers.md
-          awk 'NR==FNR{a[NR]=$0;next} /<!-- FOLLOWERS START -->/{print; for(i=1;i<=length(a);i++) print a[i]; next}1' followers.md README.md > temp.md
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+          FOLLOWERS=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/users/shardwiz/followers?per_page=20" | jq -r '.[] | "<img src=\"\(.avatar_url)?s=40\" width=\"40\" height=\"40\">"' | tr '\n' ' ')
+
+          awk -v avatars="$FOLLOWERS" '
+          BEGIN {RS=""; FS="<!-- FOLLOWERS START -->|<!-- FOLLOWERS END -->"}
+          {print $1 " <!-- FOLLOWERS START --> <p align=\"center\">" avatars "</p> <!-- FOLLOWERS END --> " $3}
+          ' README.md > temp.md
+          
           mv temp.md README.md
-          rm followers.md
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "shardwiz"
+          git config --global user.email "karlhanshegner@gmail.com"
           
           git add README.md
           if git diff --cached --quiet; then
