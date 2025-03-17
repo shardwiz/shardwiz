@@ -1,7 +1,6 @@
 ![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Welcome!&fontAlign=80&fontAlignY=40&color=gradient)
 
 <p align= "center">
-  <!-- <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&center=true&multiline=true&width=500&height=80&lines=%22The+beauty+of+software+lies+not+in;+its+complexity%2C+but+in+its+simplicity.%22+;+-Me" /> -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Deploy+ideas%2C+not+just+code." />
 </p>
 
@@ -20,11 +19,11 @@
     <h4> ✅ Frontend: </h4>
     <img src="https://skillicons.dev/icons?i=react,next,angular,js,ts,html,css" />
     <h4> ✅ Backend: </h4>
-    <img src="https://skillicons.dev/icons?i=java,kotlin,spring,nodejs,express,nestjs,graphql" /><br/>
+    <img src="https://skillicons.dev/icons?i=java,kotlin,spring,nodejs,express,nestjs,graphql" />
     <h4> ✅ Databases: </h4>
-    <img src="https://skillicons.dev/icons?i=postgresql,mongodb,mysql,redis,elasticsearch" /><br/>
+    <img src="https://skillicons.dev/icons?i=postgresql,mongodb,mysql,redis,elasticsearch" />
     <h4> ✅ Others: </h4>
-    <img src="https://skillicons.dev/icons?i=aws,gcp,docker,kubernetes,jenkins,git,github,redux,tailwind,bootstrap,materialui" /><br/>
+    <img src="https://skillicons.dev/icons?i=aws,gcp,docker,kubernetes,jenkins,git,github,redux,tailwind,bootstrap,materialui" />
 </p>
 
 <hr />
