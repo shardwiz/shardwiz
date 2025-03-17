@@ -12,11 +12,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch followers and update README
+      - name: Fetch all followers and update README
         run: |
           TOKEN="${{ secrets.GITHUB_TOKEN }}"
-          FOLLOWERS=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/users/shardwiz/followers?per_page=20" | jq -r '.[] | "<img src=\"\(.avatar_url)?s=40\" width=\"40\" height=\"40\">"' | tr '\n' ' ')
+          USERNAME="FrankMartini"  # Replace with your GitHub username
 
+          # Fetch all followers using pagination
+          PAGE=1
+          FOLLOWERS=""
+          while true; do
+            RESPONSE=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/users/shardwiz/followers?per_page=100&page=$PAGE")
+            COUNT=$(echo "$RESPONSE" | jq '. | length')
+            
+            if [ "$COUNT" -eq 0 ]; then
+              break
+            fi
+            
+            FOLLOWERS+=$(echo "$RESPONSE" | jq -r '.[] | "<img src=\"\(.avatar_url)?s=40\" width=\"40\" height=\"40\" style=\"border-radius: 50%; margin: 5px;\">"' | tr '\n' ' ')
+            PAGE=$((PAGE+1))
+          done
+
+          # Insert followers into README
           awk -v avatars="$FOLLOWERS" '
           BEGIN {RS=""; FS="<!-- FOLLOWERS START -->|<!-- FOLLOWERS END -->"}
           {print $1 " <!-- FOLLOWERS START --> <p align=\"center\">" avatars "</p> <!-- FOLLOWERS END --> " $3}
