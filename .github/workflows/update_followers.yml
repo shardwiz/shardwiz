@@ -33,7 +33,7 @@ jobs:
           done
 
           echo "Processing followers data..."
-          cat followers.json | jq -r '. | "<a href=\"" + .html_url + "\"><img style="border-radius: 50%;" src=\"" + .avatar_url + "\" width=\"50\" height=\"50\"></a>"' > followers.md
+          cat followers.json | jq -r '.[] | "<a href=\"" + .html_url + "\"><img src=\"" + .avatar_url + "\" width=\"50\" height=\"50\" style=\"border-radius: 50%;\"></a>"' followers.json > followers.md
 
           echo "Updating README.md..."
           awk '/<!-- FOLLOWERS_START -->/{print;print "";system("cat followers.md");print "";next} /<!-- FOLLOWERS_END -->/' README.md > temp.md && mv temp.md README.md
