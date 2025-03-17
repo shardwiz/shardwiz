@@ -28,7 +28,7 @@ jobs:
               break
             fi
             
-            FOLLOWERS+=$(echo "$RESPONSE" | jq -r '.[] | "<a href=\"\(.html_url)\" target=\"_blank\"><img style="border-radius: 50%;" src=\"\(.avatar_url)?s=40\" width=\"40\" height=\"40\" style=\"border-radius: 50%; margin: 5px;\"></a>"' | tr '\n' ' ')
+            FOLLOWERS+=$(echo "$RESPONSE" | jq -r '.[] | "<a href=\"\(.html_url)\" target=\"_blank\"><img src=\"\(.avatar_url)?s=40\" width=\"40\" height=\"40\" style=\"border-radius: 50%; margin: 5px;\"></a>"' | tr '\n' ' ')
             PAGE=$((PAGE+1))
           done
 
