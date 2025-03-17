@@ -1,8 +1,9 @@
 name: Update Followers
+
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily
-  workflow_dispatch:  # Allow manual runs
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual execution
 
 jobs:
   update-followers:
@@ -16,8 +17,8 @@ jobs:
           curl -s https://api.github.com/users/YOUR_GITHUB_USERNAME/followers | 
           jq -r '.[] | "<a href=\"" + .html_url + "\"><img src=\"" + .avatar_url + "\" width=\"50\" height=\"50\"></a>"' > followers.md
           sed -i '/<!-- FOLLOWERS_START -->/,/<!-- FOLLOWERS_END -->/c\<!-- FOLLOWERS_START -->\n$(cat followers.md)\n<!-- FOLLOWERS_END -->' README.md
-      
-      - name: Commit and Push
+
+      - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions@github.com'
