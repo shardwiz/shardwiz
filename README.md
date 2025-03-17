@@ -16,9 +16,9 @@
 <hr />
 
 <p align="center">
-  <h3>Main Skills</h3>
+  <h3>Core Skills</h3>
     <h4> ✅ Frontend: </h4>
-    <img src="https://skillicons.dev/icons?i=react,next,angular,js,ts,html,css" /><br/>
+    <img src="https://skillicons.dev/icons?i=react,next,angular,js,ts,html,css" />
     <h4> ✅ Backend: </h4>
     <img src="https://skillicons.dev/icons?i=java,kotlin,spring,nodejs,express,nestjs,graphql" /><br/>
     <h4> ✅ Databases: </h4>
