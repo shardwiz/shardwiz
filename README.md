@@ -7,8 +7,10 @@
   <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="65" height="65" />
   <!-- <img src="https://techstack-generator.vercel.app/csharp-icon.svg" alt="icon" width="65" height="65" /> -->
   <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/redux-icon.svg" alt="icon" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/jest-icon.svg" alt="icon" width="65" height="65" />
+  <img src="https://techstack-generator.vercel.app/vue-icon.svg" alt="icon" width="65" height="65" />
+  
+  <!-- <img src="https://techstack-generator.vercel.app/redux-icon.svg" alt="icon" width="65" height="65" /> -->
+  <!-- <img src="https://techstack-generator.vercel.app/jest-icon.svg" alt="icon" width="65" height="65" /> -->
   <!-- <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="65" height="65" />
   <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="65" height="65" /> -->
   <img src="https://techstack-generator.vercel.app/restapi-icon.svg" alt="icon" width="65" height="65" />
@@ -22,9 +24,9 @@
   <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" width="65" height="65" />
   <!-- <img src="https://techstack-generator.vercel.app/rescript-icon.svg" alt="icon" width="65" height="65" /> -->
   <!-- <img src="https://techstack-generator.vercel.app/cpp-icon.svg" alt="icon" width="65" height="65" /> -->
-  <img src="https://techstack-generator.vercel.app/sass-icon.svg" alt="icon" width="65" height="65" />
+  <!-- <img src="https://techstack-generator.vercel.app/sass-icon.svg" alt="icon" width="65" height="65" /> -->
   <!-- <img src="https://techstack-generator.vercel.app/gatsby-icon.svg" alt="icon" width="65" height="65" /> -->
-  <img src="https://techstack-generator.vercel.app/webpack-icon.svg" alt="icon" width="65" height="65" />
+  <!-- <img src="https://techstack-generator.vercel.app/webpack-icon.svg" alt="icon" width="65" height="65" /> -->
   <!-- <img src="https://techstack-generator.vercel.app/prettier-icon.svg" alt="icon" width="65" height="65" />
   <img src="https://techstack-generator.vercel.app/eslint-icon.svg" alt="icon" width="65" height="65" /> -->
   <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" width="65" height="65" />
