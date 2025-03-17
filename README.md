@@ -27,3 +27,8 @@
 </p>
 
 <hr />
+
+## 🌟 My Followers
+
+<!-- FOLLOWERS_START -->
+<!-- FOLLOWERS_END -->
