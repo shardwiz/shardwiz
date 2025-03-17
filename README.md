@@ -17,14 +17,14 @@
 
 <p align="center">
   <h3>Main Skills</h3>
-    <h4> ✅ Languages: </h4>
-    <img src="https://skillicons.dev/icons?i=go,ruby,python,js,ts,java,cs,c,cpp,solidity,rust" /><br/>
-    <h4> ✅ Frameworks/Libraries: </h4>
-    <img src="https://skillicons.dev/icons?i=rails,django,nodejs,react,next,angular,vue,nuxt,spring,wordpress" /><br/>
+    <h4> ✅ Frontend: </h4>
+    <img src="https://skillicons.dev/icons?i=react,next,angular,js,ts,html,css" /><br/>
+    <h4> ✅ Backend: </h4>
+    <img src="https://skillicons.dev/icons?i=java,kotlin,spring,nodejs,express,nestjs,graphql" /><br/>
     <h4> ✅ Databases: </h4>
-    <img src="https://skillicons.dev/icons?i=postgresql,mongodb,mysql,redis" /><br/>
+    <img src="https://skillicons.dev/icons?i=postgresql,mongodb,mysql,redis,elasticsearch" /><br/>
     <h4> ✅ Others: </h4>
-    <img src="https://skillicons.dev/icons?i=aws,azure,docker,kubernetes,jenkins,git,ansible,tailwind,bootstrap" /><br/>
+    <img src="https://skillicons.dev/icons?i=aws,gcp,docker,kubernetes,jenkins,git,github,redux,tailwind,bootstrap,materialui" /><br/>
 </p>
 
 <hr />
