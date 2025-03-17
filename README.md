@@ -28,6 +28,9 @@
 
 <hr />
 
+![GitHub followers](https://img.shields.io/github/followers/shardwiz?label=Followers&style=social)
+
+
 ## 🌟 My Followers
 
 <!-- FOLLOWERS_START -->
