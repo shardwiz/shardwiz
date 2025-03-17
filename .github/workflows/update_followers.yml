@@ -1,26 +1,30 @@
-name: Update Followers
+name: Update Followers Avatars
+
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily
-  workflow_dispatch:  # Allow manual runs
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  update-followers:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch Followers and Update README
+      - name: Fetch followers and update README
         run: |
-          curl -s https://api.github.com/users/shardwiz/followers | 
-          jq -r '.[] | "<a href=\"" + .html_url + "\"><img src=\"" + .avatar_url + "\" width=\"50\" height=\"50\"></a>"' > followers.md
-          sed -i '/<!-- FOLLOWERS_START -->/,/<!-- FOLLOWERS_END -->/c\<!-- FOLLOWERS_START -->\n$(cat followers.md)\n<!-- FOLLOWERS_END -->' README.md
-      
-      - name: Commit and Push
+          curl -s "https://api.github.com/users/shardwiz/followers" | jq -r '.[] | "![Avatar](\(.avatar_url)&s=40)"' > followers.md
+          awk 'NR==FNR{a[NR]=$0;next} /<!-- FOLLOWERS START -->/{print; for(i=1;i<=length(a);i++) print a[i]; next}1' followers.md README.md > temp.md
+          mv temp.md README.md
+          rm followers.md
+
+      - name: Commit and push changes
         run: |
-          git config --global user.name 'shardwiz'
-          git config --global user.email 'karlhanshegner@gmail.com'
+          git config --global user.name "shardwiz"
+          git config --global user.email "karlhanshegner@gmail.com"
           git add README.md
-          git commit -m "Updated followers list" || exit 0
+          git commit -m "Update followers' avatars"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
