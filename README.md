@@ -1,3 +1,2 @@
 ## Followers
- <!-- FOLLOWERS START -->
- <!-- FOLLOWERS END -->  
+  <!-- FOLLOWERS START --> <p align="center"></p> <!-- FOLLOWERS END -->   
